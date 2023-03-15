@@ -181,7 +181,7 @@ function buildSliderList() {
 }
 
 buildSliderList();
-window.addEventListener('resize', buildSliderList);
+// window.addEventListener('resize', buildSliderList);
 
 let sliderList = document.querySelector('.wrap-pets-cards'); // "лента" с карточками
 
