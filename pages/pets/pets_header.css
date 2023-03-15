@@ -259,6 +259,8 @@ header .burger-menu {
     height: 35px;
     margin: 0;
 
+    white-space: nowrap;
+
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
