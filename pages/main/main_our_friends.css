@@ -240,6 +240,8 @@
 
 .pets-card-popup-bg .pets-card-popup .esc-pets-card-popup:hover {
     cursor: pointer;
+    background: #F1CDB3;
+    border:none;
 }
 
 .pets-card-popup-bg .pets-card-popup .esc-pets-card-popup img {

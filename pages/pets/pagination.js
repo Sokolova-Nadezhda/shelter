@@ -260,3 +260,70 @@ let pageWidth = document.documentElement.scrollWidth; // ширина стран
             btnDoublePrev.removeAttribute("disabled");
         }
       }
+
+// ---------POPUP---------------------------------------------------------------------
+
+// создание карточек по шаблону
+
+function generatePopupPetsCardNode(img, name, breed, description, age, newId){
+    let petsCardTemplate = document.getElementById('pets-card-popup-template');
+    let newPetsCard = petsCardTemplate.cloneNode(true);
+
+    newPetsCard.getElementsByTagName('img')[0].src = img;
+    newPetsCard.id = '';
+
+    newPetsCard.getElementsByTagName('h3')[0].innerHTML = name;
+    newPetsCard.getElementsByTagName('h4')[0].innerHTML = breed;
+    newPetsCard.getElementsByTagName('h5')[0].innerHTML = description;
+    newPetsCard.getElementsByClassName('age')[0].innerHTML = age;
+    newPetsCard.id = newId;
+
+    return newPetsCard;
+}
+
+  
+let popupPetsCardBg = document.querySelector('.pets-card-popup-bg'); // Фон попап окна
+let popupPetsCard = document.querySelector('.pets-card-popup'); // Само окно
+let openPopupPetsCardButtons = document.querySelectorAll('.pets-card'); // Кнопки для показа окна
+let closePopupPetsCardButton = document.querySelector('.esc-pets-card-popup'); // Кнопка для скрытия окна
+
+
+openPopupPetsCardButtons.forEach((button) => {
+    button.addEventListener('click', showActivePopup)
+});
+
+function showActivePopup(e) { // Для каждой вешаем обработчик событий на клик
+    e.preventDefault();
+
+    let targetPetsCard = e.currentTarget;
+
+    if (targetPetsCard.classList !== null && 'pets-card' === targetPetsCard.classList.value) {
+
+      let popup_pets_card = document.querySelector('.content-pets-card-popup');
+      popup_pets_card.innerHTML = '';
+    
+      let targetPetsCardObject = initPetsCard().find(function(currentPetsCard) {
+            return currentPetsCard.newId === targetPetsCard.id;} );
+
+      let currentPopupPetsCardNode = generatePopupPetsCardNode(targetPetsCardObject.img, targetPetsCardObject.name, targetPetsCardObject.breed, targetPetsCardObject.description, targetPetsCardObject.age, targetPetsCardObject.newId);
+      popup_pets_card.appendChild(currentPopupPetsCardNode);
+
+      popupPetsCardBg.classList.add('active'); // Добавляем класс 'active' для фона
+      popupPetsCard.classList.add('active'); 
+      document.body.style.overflow = "hidden";
+    }
+}
+
+closePopupPetsCardButton.addEventListener('click',() => { // Вешаем обработчик на крестик
+  popupPetsCardBg.classList.remove('active'); // Убираем активный класс с фона
+  popupPetsCard.classList.remove('active'); // И с окна
+  document.body.style.overflow = ""; 
+});
+
+document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
+    if(e.target === popupPetsCardBg) { // Если цель клика - фот, то:
+      popupPetsCardBg.classList.remove('active'); // Убираем активный класс с фона
+      popupPetsCard.classList.remove('active'); // И с окна
+      document.body.style.overflow = ""; 
+    }
+});

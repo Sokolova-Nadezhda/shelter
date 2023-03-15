@@ -172,6 +172,205 @@ button[disabled]:hover {
     background: #F1CDB3;
 }
 
+/* ----------------POPUP----------------------------------------------------------------------------- */
+
+#pets-card-popup-template {
+    display: none;
+}
+
+.pets-card-popup-bg {
+    box-sizing: border-box;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    pointer-events: none; 
+    transition: 0.5s all;
+
+    background: rgba(0,0,0,0.4);
+}
+
+.pets-card-popup-bg.active {
+    opacity: 1; 
+    pointer-events: all; 
+    transition: 0.5s all;
+}
+
+.pets-card-popup-bg.active:hover {
+    cursor: pointer;
+}
+
+.pets-card-popup-bg .pets-card-popup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    left: 50%;
+    top: 50%;                        
+    transform: translate(-50%, -50%);
+
+    width: 942px;
+    height: 552px;
+}
+
+.pets-card-popup-bg .pets-card-popup:hover {
+    cursor: default;
+}
+
+.pets-card-popup-bg .pets-card-popup .esc-pets-card-popup {
+    position: relative;
+
+    display: flex;
+    align-self: flex-end;
+    flex-shrink: 0;
+
+    width: 52px;
+    height: 52px;
+    
+    background: none;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+}
+
+.pets-card-popup-bg .pets-card-popup .esc-pets-card-popup:hover {
+    cursor: pointer;
+    background: #F1CDB3;
+    border:none;
+}
+
+.pets-card-popup-bg .pets-card-popup .esc-pets-card-popup img {
+    position: absolute;
+    
+    left: 50%;
+    top: 50%;                        
+    transform: translate(-50%, -50%);
+
+    width: 12px;
+    height: 12px;
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    width: 900px;
+    height: 500px;
+    gap: 29px;
+
+    background: #FAFAFA;
+    border-radius: 9px;
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup:hover {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup .pet-photo {
+    height: 500px;
+    width: 500px;
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section {
+    display: flex;
+    flex-direction: column;
+
+    margin: 50px 20px 88px 0;
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section h3 {
+    margin: 0;
+    text-align: start;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+
+    letter-spacing: 0.06em;
+    
+    color: #000000;
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-breed {
+    margin: 10px 0 0 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+
+    letter-spacing: 0.06em;
+    
+    color: #000000;
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-description {
+    margin: 40px 0 0 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+
+    letter-spacing: 0.06em;
+    
+    color: #000000;
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 11px;
+    margin: 40px 0 0 0;
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-information div{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    
+    letter-spacing: 0.06em;
+    
+    color: #000000;
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-information div pre {
+    margin: 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    
+    letter-spacing: 0.06em;
+    
+    color: #000000;
+}
+
+.pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-information div img {
+    height: 4px;
+    width: 4px;
+
+    margin-right: 10px;
+}
+
 @media(max-width: 1239px) {
     .our-friends {
         margin: 80px 0 76px 0;
@@ -192,6 +391,87 @@ button[disabled]:hover {
         height: 1365px;
     }
 }
+
+@media(max-width: 1054px) {
+
+    .pets-card-popup-bg .pets-card-popup {
+        width: 673px;
+        height: 402px;
+    }
+    
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup {   
+        width: 630px;
+        height: 350px;
+        gap: 11px;
+    }
+    
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .pet-photo {
+        height: 350px;
+        width: 350px;
+    }
+    
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section { 
+        margin: 10px 9px 37px 0;
+    }
+    
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-description {
+        margin: 20px 0 0 0;
+
+        line-height: 110%;
+        font-size: 13px;
+
+        letter-spacing: 0.055em;
+    }
+    
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-information {
+        gap: 6px;
+        margin: 20px 0 0 0;
+    }
+}
+
+@media(max-width: 767px) {
+    .pets-card-popup-bg .pets-card-popup {
+        width: 270px;
+        height: 393px;
+    }
+    
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup {   
+        width: 240px;
+        height: 341px;
+        gap: 0;
+    }
+    
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .pet-photo {
+        display: none;
+    }
+    
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section { 
+        margin: 10px;
+    }
+
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section h3 { 
+        text-align: center;
+    }
+
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-breed { 
+        text-align: center;
+    }
+    
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-description {
+        margin: 15px 0 0 0;
+        letter-spacing: 0.06em;
+    }
+    
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-information {
+        gap: 3px;
+        margin: 15px 0 0 0;
+    }
+
+    .pets-card-popup-bg .pets-card-popup .content-pets-card-popup .text-section .pet-information div {
+        font-size: 13px;
+    }
+}
+
 
 @media(max-width: 599px) {
     .our-friends {
