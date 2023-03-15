@@ -1,0 +1,355 @@
+/* HEADER ----------------------------------------------------------------------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    margin: 30px 0 30px 0;
+    width: 1200px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 184px;
+    height: 60px;
+}
+
+header .logo  h1 {
+    height: 35px;
+    margin: 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+
+    letter-spacing: 0.05em;
+
+    color: #545454;
+}
+
+header .logo  p {
+    height: 15px;
+    margin: 0;
+    margin-left: 4px;
+    
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+
+    letter-spacing: 0.1em;
+
+    color: #292929;
+}
+
+header .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 16px 0 0 0;
+    padding: 0;
+
+    width: 443px;
+    height: 27px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    
+    color: #545454;
+}
+
+header .menu a {
+    text-decoration: none;
+
+    color: #545454;
+}
+
+header .menu li {
+    position: relative;
+}
+
+#active-element:hover {
+    cursor: default;
+}
+
+#active-element a {
+    color: #292929;
+}
+
+#active-element .active {
+    display: block;
+}
+
+header .menu li .active {
+    display: none;
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #F1CDB3;
+}
+
+header .menu li:hover a {
+    color: #292929;
+}
+
+header .menu li:hover .active {
+    display: block;
+}
+
+header .burger-menu {
+    display: none;
+}
+
+@media(max-width: 1239px) {
+    header {
+        max-width: 708px;
+        gap: 81px;
+    }
+}
+
+@media(max-width: 768px){
+    header {
+        margin-top: 30px;
+    }
+}
+
+@media(max-width: 767px) {
+
+    header nav {
+        display: none;
+    }
+
+    header .burger-menu {
+        display: block;
+        align-self: center;
+        
+        width: 30px;
+        height: 22px;
+    }
+
+    header .burger-menu:hover  {
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 729px) {
+
+    header {
+       max-width: 400px;
+    }
+}
+
+@media(max-width: 429px) {
+    header {
+        align-self: flex-start;
+        max-width: 260px;
+        gap: 43px;
+    }
+}
+
+
+/* POPUP-MENU ---------------------------------------------------------------------------- */
+
+.wrapper-popup-menu {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    pointer-events: none; 
+}
+
+.wrapper-popup-menu:hover {
+    cursor: pointer;
+}
+
+.wrapper-popup-menu.active-popup {
+    opacity: 1; 
+    pointer-events: all; 
+    overflow: auto;
+
+    transition: .5s all; 
+    background-color: rgba(0,0,0,.5);
+}
+
+.popup-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    top: 0;
+    right: 0;
+
+    width: 320px;
+    height: 823px;
+    gap: 158px;
+
+    background: white; 
+}
+
+.popup-menu:hover {
+    cursor: default;
+}
+
+.popup-menu.show-animation{
+    animation: showDown 1.5s;
+}
+
+.popup-menu.hide-animation{
+    animation: hideTop 2s;
+}
+
+@keyframes showDown {
+
+    from {top:-100%;}
+    to {top:0;}
+
+}
+
+@keyframes hideTop {
+
+    from {top:0;}
+    to {top:-200%;}
+
+}
+
+.popup-menu .header-pm {
+    display: flex; 
+    flex-direction: row;
+
+    margin: 30px 0 0 10px;
+    gap: 43px;
+}
+
+.popup-menu .header-pm a {
+    text-decoration: none;
+}
+
+.popup-menu .header-pm .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 184px;
+    height: 60px;
+}
+
+.popup-menu .header-pm .logo  h1 {
+    height: 35px;
+    margin: 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+
+    letter-spacing: 0.05em;
+
+    color: #545454;
+}
+
+.popup-menu .header-pm .logo  p {
+    height: 15px;
+    margin: 0;
+    margin-left: 4px;
+    
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+
+    letter-spacing: 0.1em;
+
+    color: #292929;
+}
+
+.popup-menu .header-pm .burger-menu-esc {
+    display: block;
+    align-self: center;
+    
+    width: 30px;
+    height: 22px;
+}
+
+.popup-menu .header-pm .burger-menu-esc:hover {
+    cursor: pointer;
+}
+
+.popup-menu .header-pm .burger-menu-esc.show-animation {
+    transition: 2.5s all;
+    rotate: -90deg;
+}
+
+.popup-menu .header-pm .burger-menu-esc.hide-animation {
+    transition: 0.3s all;
+    rotate: 0deg;
+}
+
+.popup-menu .menu {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+}
+
+.popup-menu .menu a {
+    text-decoration: none;
+
+    color: #545454;
+}
+
+.popup-menu .menu li {
+    position: relative;
+}
+
+.popup-menu .menu li .active {
+    display: none;
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #F1CDB3;
+}
+
+.popup-menu .menu li:hover a {
+    color: #292929;
+}
+
+.popup-menu .menu li:hover .active {
+    display: block;
+}

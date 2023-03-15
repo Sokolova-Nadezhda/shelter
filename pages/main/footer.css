@@ -1,0 +1,157 @@
+/* FOOTER ------------------------------------------------------------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 40px;
+    gap: 160px;
+}
+
+footer .contacts-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    margin: 16px 0 60px 0;
+    gap: 160px;
+}
+
+footer .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    height: 234px;
+    max-width: 302px;
+}
+
+#contact-container {
+    max-width: 278px;
+    
+}
+
+#contact-container h3 {
+    letter-spacing: 0.05em;
+}
+
+footer .contact-container a {
+    text-decoration: none;
+}
+
+footer .contact-container h3 {
+    margin: 0;
+    
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+
+    letter-spacing: 0.06em;
+    
+    color: #FFFFFF;
+}
+
+footer .contact-container .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 20px;
+}
+
+footer .contact-container .contact:hover h4{
+    color: #d9ac8d;
+}
+
+footer .contact-container .contact h4 {
+    margin: 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+  
+    letter-spacing: 0.06em;
+
+    color: #F1CDB3;    
+}
+
+footer .contact-container #footer-dog {
+    width: 300px;
+    height: 310px;
+}
+
+@media(max-width: 1239px) {
+    footer {
+        align-self: center;
+        gap: 60px;
+    }
+
+    footer .contacts-wrapper {
+        gap: 60px;
+    }
+}
+
+@media(max-width: 1054px) {
+    footer {
+        flex-direction: column;
+
+        margin-top: 30px;
+        gap: 65px;
+    }
+
+    footer .contacts-wrapper {
+        margin: 0;
+    }
+
+    footer  #footer-dog {
+        align-self: center;
+
+        width: 300px;
+        height: 310px;
+    }
+}
+
+@media(max-width: 679px) {
+
+    footer {
+        gap: 40px;
+    }
+
+    footer .contacts-wrapper {
+        flex-direction: column;
+        align-items: center;
+
+        gap: 40px;
+    }
+
+    #contact-container {
+        align-items: center;
+    }
+
+    footer .contact-container {
+        height: auto;
+        gap: 40px;
+    }
+
+    footer .contact-container h3 {
+        text-align: center;
+    }
+}
+
+@media(max-width: 469px) {
+
+    footer  #footer-dog {
+        width: 260px;
+        height: 269px;
+    }
+
+    footer .contact-container h3 {
+        align-self: center;
+
+        max-width: 278px;
+        font-size: 25px;
+    }
+}
