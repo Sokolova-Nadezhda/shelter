@@ -1,0 +1,74 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100'); */
+
+/* *, *:after, *:before { */
+    /* box-sizing: border-box; */
+    /* padding: 0; */
+    /* margin: 0; */
+    /* transition: .5s ease-in-out; */
+    /*плавность переходов для всех элементов страницы*/
+ /* } */
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    width: 100%;
+    margin:auto;
+    height: 100%;
+
+    font-family: 'Georgia', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+.background-grey {
+    display: flex;
+
+    width: 100%;
+    height: auto;
+
+    background: #F6F6F6;   
+}
+
+.background-brown {
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+
+@media(min-width: 3000px) {
+    .background-grey{
+        height: 100%;
+    }
+}
+
+@media(max-width: 768px) {
+    .wrapper {
+        padding: 0 10px;
+        max-width: 708px;
+    }
+}
+
+@media(max-width: 320px) {
+    .wrapper {
+        width: 300px;
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Our Pets</title>
+        <link rel="stylesheet" type="text/css" href="../main/general.css">
+        <link rel="stylesheet" type="text/css" href="pets_header.css">
+        <link rel="stylesheet" type="text/css" href="pets_our_friends.css">
+        <link rel="stylesheet" type="text/css" href="../main/footer.css">
+
+        <link rel="icon" type="image/x-icon" href="../../assets/images//footer-puppy.png">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <a href="../main/main.html">
+                    <div class="logo">
+                        <h1>Cozy House</h1>
+                        <p>Shelter for pets in Boston</p>
+                    </div>
+                </a>
+
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../main/main.html">About the shelter</a><div class="active"></div></li>
+                        <li id="active-element"><a>Our pets</a><div class="active"></div></li>
+                        <li><a href="../main/main.html #help">Help the shelter</a><div class="active"></div></li>
+                        <li><a href="#contacts">Contacts</a><div class="active"></div></li>
+                    </ul>
+                </nav>
+
+                <img class="burger-menu" src="../../assets/icons/Burger-pets.png">
+            </header>
+        </div>
+
+        <div class="wrapper-popup-menu">
+            <div class="popup-menu">
+                <div class="header-pm">
+                    <a href="main.html">
+                        <div class="logo">
+                            <h1>Cozy House</h1>
+                            <p>Shelter for pets in Boston</p>
+                        </div>
+                    </a>
+                    <img class="burger-menu-esc" src="../../assets/icons/Burger-pets.png">
+                </div>
+
+                
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../main/main.html" class="burger-nav">About the shelter</a> <div class="active"></div></li>
+                        <li id="active-element"><a class="burger-nav">Our pets</a><div class="active"></div></li>
+                        <li><a href="../main/main.html #help" class="burger-nav">Help the shelter</a><div class="active"></div></li>
+                        <li><a href="#contacts" class="burger-nav">Contacts</a><div class="active"></div></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </div>
+
+        <div class="background-grey">
+            <div class="wrapper">
+                <div class="our-friends">
+                    <h3>Our friends who<br>are looking for a house</h3>
+                    
+                    <div class="wrap-cards-container">
+                       
+                        <div class="cards-container">
+
+                            <div class="wrap-pets-cards">
+    
+                            </div>
+    
+                        </div>
+
+                    </div>
+
+                    
+
+                    <div class="carousel-buttons" id="carousel">
+                        <button class="double-prev" type="button" disabled><h4>&lt;&lt;</h4></button>
+                        <button class="prev" type="button" disabled><h4>&lt;</h4></button>
+                        <button id="page-number"><h4>1</h4></button>
+                        <button class="next" type="button"><h4>&gt;</h4></button>
+                        <button class="double-next" type="button"><h4>&gt;&gt;</h4></button>
+                    </div>
+
+                    <div class="pets-card" id="pets-card-template">
+                        <img src="">
+                        <h4></h4>
+                        <button>Learn more</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="background-brown">
+            <div class="wrapper">
+                <footer id="contacts">
+                    <div class="contacts-wrapper">
+                        <div class="contact-container" id="contact-container">
+                            <h3>For questions and suggestions</h3>
+                            <a href="https://www.google.com/intl/ru/gmail/about/" target="_blank"><div class="contact"><img src="../../assets/icons/icon-email.svg"><h4>email@shelter.com</h4></div></a>
+                            <a href="tel: 0000000"><div class="contact"><img src="../../assets/icons/icon-phone.svg"><h4>+13 674 567 75 54</h4></div></a>
+                        </div>
+                        <div class="contact-container">
+                            <h3>We are waiting for your visit</h3>
+                            <a href="https://goo.gl/maps/hANGERz4Q5NGypkX6" target="_blank"><div class="contact"><img src="../../assets/icons/icon-marker.png"><h4>1 Central Street, Boston (entrance from the store)</h4></div></a>
+                            <a href="https://goo.gl/maps/Aac7cZf1Fdx6tc4AA" target="_blank"><div class="contact"><img src="../../assets/icons/icon-marker.png"><h4>18 South Park, London</h4></div></a>
+                        </div>
+                    </div>
+                    
+                    <img src="../../assets/images/footer-puppy.png" id="footer-dog">
+                </footer>
+            </div>
+        </div>
+        
+        <script src="../main/popup_menu.js"></script>
+        <script src="pagination.js"></script>
+
+    </body>
+</html>

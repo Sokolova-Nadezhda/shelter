@@ -1,0 +1,173 @@
+/* DONATION ----------------------------------------------------------------------- */
+
+.donation-container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+
+    margin: 80px 0 100px 0;
+    gap: 30px;
+}
+
+.donation-container img {
+    align-self: center;
+    width: 505px;
+    height: 261px;
+}
+
+.donation-container .text-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.donation-container .text-container h3 {
+    margin: 0;
+    width: 300px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+
+    letter-spacing: 0.06em;
+
+    color: #545454;
+}
+
+.donation-container .text-container h5 {
+    margin: 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+
+    letter-spacing: 0.06em;
+
+    color: #545454;
+}
+
+.donation-container .text-container a {
+    text-decoration: none;
+}
+
+.donation-container .text-container .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 349px;
+    height: 43px;
+    gap: 15px;
+
+    background: #F1CDB3;
+    border-radius: 9px;
+}
+
+.donation-container .text-container .contact:hover {
+    background-color: #FDDCC4;
+}
+
+.donation-container .text-container .contact img {
+    width: 30px;
+    height: 23px;
+}
+
+.donation-container .text-container .contact h4 {
+    margin: 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+
+    letter-spacing: 0.06em;
+
+    color: #545454;
+}
+
+.donation-container .text-container p {
+    margin: 0;
+    max-width: 380px;
+
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: #B2B2B2;
+}
+
+@media(max-width: 1239px) {
+    .donation-container {
+        flex-direction: column-reverse;
+
+        gap: 60px;
+    }
+
+    .donation-container .text-container {
+        align-self: center;
+        
+        max-width: 380px;
+    }
+}
+
+@media(max-width: 649px) {
+
+    .donation-container {
+        margin: 42px 0;
+        gap: 42px;
+    }
+
+    .donation-container img {
+        align-self: center;
+
+        width: 260px;
+        height: auto;
+    }
+}
+
+@media(max-width: 469px) {
+
+    .donation-container {
+        max-width: 300px;
+    }
+
+    .donation-container .text-container {
+        align-items: center;
+    }
+
+    .donation-container .text-container h3 {
+        text-align: center;
+
+        font-size: 25px;
+    }
+
+    .donation-container .text-container h5 {
+        line-height: 160%;
+        letter-spacing: 0;
+    }
+
+    .donation-container .text-container .contact {
+        margin: 0;
+        width: 281px;
+    }
+
+    .donation-container .text-container .contact h4 {
+        font-size: 15px;
+    }
+
+    .donation-container .text-container p {
+        text-align: justify;
+        
+        width: 280px;
+    }
+
+}

@@ -1,0 +1,220 @@
+/* OUR FRIENDS -------------------------------------------------------------------------------- */
+
+.our-friends {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 80px 0 100px 0;
+    gap: 60px;
+}
+
+.our-friends h3 {
+    margin: 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+    color: #545454;
+}
+
+#pets-card-template {
+    display: none;
+}
+
+.our-friends .wrap-cards-container {
+    display: flex;
+    overflow: hidden;
+
+    max-width: 1200px;
+}
+
+.our-friends .wrap-cards-container .cards-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.our-friends .wrap-cards-container .cards-container .wrap-pets-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    width: 1200px;
+    height: 900px;
+
+    gap: 30px
+}
+
+.our-friends .wrap-cards-container .cards-container .wrap-pets-cards .pets-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 270px;
+    height: 435px;
+
+    background: #FAFAFA;
+    border-radius: 9px;
+}
+
+.our-friends .wrap-cards-container .cards-container .wrap-pets-cards .pets-card:hover {
+    cursor: pointer;
+    background-color: #FFFF;
+}
+
+.our-friends .wrap-cards-container .cards-container .wrap-pets-cards .pets-card:hover button {
+    background-color: #FDDCC4;
+    border: 0;
+}
+
+.our-friends .wrap-cards-container .cards-container .wrap-pets-cards .pets-card h4 {
+    margin: 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    letter-spacing: 0.06em;
+
+    color: #545454;
+}
+
+.our-friends .wrap-cards-container .cards-container .wrap-pets-cards .pets-card button {
+    width: 187px;
+    height: 52px;
+    margin-bottom: 30px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+
+    letter-spacing: 0.06em;
+
+    color: #292929;
+    
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+}
+
+.our-friends .wrap-cards-container .cards-container .wrap-pets-cards .pets-card button:hover {
+    cursor: pointer;
+    background-color: #ffe7d6;
+}
+
+.our-friends .carousel-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 340px;
+}
+
+.our-friends .carousel-buttons button {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+
+    align-content: center;
+
+    border: 2px solid #F1CDB3;
+    border-radius: 100%;
+}
+
+.our-friends .carousel-buttons button:hover {
+    cursor: pointer;
+    background-color: #FDDCC4;
+    border: 0;
+}
+
+.our-friends .carousel-buttons button:disabled,
+button[disabled]{
+    border: 2px solid #CDCDCD;
+}
+
+.our-friends .carousel-buttons button:disabled,
+button[disabled]:hover {
+    cursor: default;
+    background-color: unset;
+}
+
+.our-friends .carousel-buttons button:disabled h4 {
+    color: #CDCDCD;
+}
+
+.our-friends .carousel-buttons button h4 {
+    margin: 0;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #292929;    
+}
+
+.our-friends #page-number {
+    background: #F1CDB3;
+}
+
+@media(max-width: 1239px) {
+    .our-friends {
+        margin: 80px 0 76px 0;
+        gap: 30px;
+    }
+
+    .our-friends .carousel-buttons {
+        margin-top: 10px;
+    }
+
+
+    .our-friends .wrap-cards-container {
+        max-width: 580px;
+    }
+
+    .our-friends .wrap-cards-container .cards-container .wrap-pets-cards {
+        width: 580px;
+        height: 1365px;
+    }
+}
+
+@media(max-width: 599px) {
+    .our-friends {
+        margin: 42px 0;
+        gap: 42px;
+    }
+
+    .our-friends h3 {
+        font-size: 25px;
+        line-height: 125%;
+    }
+
+    .our-friends .carousel-buttons {
+        margin-top: 0;
+
+        width: 300px;
+    }
+
+    .our-friends .wrap-cards-container {
+        max-width: 270px;
+    }
+
+    .our-friends .wrap-cards-container .cards-container .wrap-pets-cards {
+        width: 270px;
+    }
+}
