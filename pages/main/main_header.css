@@ -42,6 +42,8 @@ header .logo  p {
     height: 15px;
     margin: 0;
     margin-left: 4px;
+
+    white-space: nowrap;
     
     font-family: 'Arial';
     font-style: normal;
@@ -259,6 +261,8 @@ header .burger-menu {
     height: 15px;
     margin: 0;
     margin-left: 4px;
+
+    white-space: nowrap;
     
     font-family: 'Arial';
     font-style: normal;
