@@ -163,7 +163,7 @@ function buildSliderList() {
         gap = 40;
     }
 
-    if (pageWidth < 769) {
+    if (pageWidth < 768) {
         petsCardCount = 1;
     }
     

@@ -429,7 +429,7 @@
     }
 }
 
-@media(max-width: 767px) {
+@media(max-width: 768px) {
     .pets-card-popup-bg .pets-card-popup {
         width: 270px;
         height: 393px;
@@ -472,7 +472,7 @@
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .our-friends {
         margin: 42px 0;
         gap: 42px;
