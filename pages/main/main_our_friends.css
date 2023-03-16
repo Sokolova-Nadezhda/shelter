@@ -472,8 +472,7 @@
     }
 }
 
-@media(max-width: 729px) {
-
+@media(max-width: 768px) {
     .our-friends {
         margin: 42px 0;
         gap: 42px;
@@ -482,25 +481,18 @@
     .our-friends .carousel-container {
         flex-wrap: wrap;
         justify-content: center;
+        align-self: center;
 
-        max-width: 580px;
+        max-width: 270px;
         gap: 20px 80px;
     }
-
-    .our-friends .carousel-container .cards-container {
-        order: -1;
-        margin: 0;
-    }
-}
-
-@media(max-width: 599px) {
 
     .our-friends h3 {
         font-size: 25px;
     }
 
-    .our-friends .carousel-container {
-        align-self: center;
-        max-width: 270px;
+    .our-friends .carousel-container .cards-container {
+        order: -1;
+        margin: 0;
     }
 }
