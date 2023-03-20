@@ -172,6 +172,10 @@ button[disabled]:hover {
     background: #F1CDB3;
 }
 
+.our-friends #page-number:hover {
+    cursor: default;
+}
+
 /* ----------------POPUP----------------------------------------------------------------------------- */
 
 #pets-card-popup-template {
