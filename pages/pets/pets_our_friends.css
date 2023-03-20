@@ -210,6 +210,11 @@ button[disabled]:hover {
     cursor: pointer;
 }
 
+.pets-card-popup-bg.active:hover .esc-pets-card-popup {
+    background: #F1CDB3;
+    border:none;
+}
+
 .pets-card-popup-bg .pets-card-popup {
     position: absolute;
     display: flex;
@@ -227,6 +232,12 @@ button[disabled]:hover {
 
 .pets-card-popup-bg .pets-card-popup:hover {
     cursor: default;
+}
+
+.pets-card-popup-bg .pets-card-popup:hover .esc-pets-card-popup {
+    background: none;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
 }
 
 .pets-card-popup-bg .pets-card-popup .esc-pets-card-popup {
